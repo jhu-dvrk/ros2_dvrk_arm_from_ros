@@ -51,7 +51,7 @@ void dvrk_arm_from_ros::Init(void)
                                 Commands({"state_command", "servo_cp"}),
                                 // read commands
                                 Commands({"operating_state", "period_statistics",
-                                          "setpoint_js", "measured_js", "setpoint_cp"}),
+                                          "setpoint_js", "measured_js", "setpoint_cp", "measured_cp"}),
                                 // write events
                                 Commands({"operating_state", "error", "warning", "status"}));
 
