@@ -5,7 +5,7 @@
   Author(s):  Anton Deguet
   Created on: 2020-01-13
 
-  (C) Copyright 2020-2022 Johns Hopkins University (JHU), All Rights Reserved.
+  (C) Copyright 2020-2023 Johns Hopkins University (JHU), All Rights Reserved.
 
 --- begin cisst license - do not edit ---
 
@@ -47,6 +47,8 @@ void dvrk_arm_from_ros::Init(void)
     typedef std::vector<std::string> Commands;
     populate_interface_provided(interface_provided,
                                 ros_namespace,
+                                // void commands
+                                Commands({"hold"}),
                                 // write commands
                                 Commands({"state_command", "servo_cp"}),
                                 // read commands
