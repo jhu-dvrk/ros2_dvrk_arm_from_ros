@@ -48,19 +48,14 @@ void dvrk_arm_from_ros::Init(void)
     populate_interface_provided(interface_provided,
                                 ros_namespace,
                                 // void commands
-                                Commands({"hold"}),
+                                Commands({"hold", "free"}),
                                 // write commands
-                                Commands({"state_command", "servo_cp"}),
+                                Commands({"state_command", "servo_cp", "servo_js"}),
                                 // read commands
                                 Commands({"operating_state", "period_statistics",
                                           "setpoint_js", "measured_js", "setpoint_cp", "measured_cp"}),
                                 // write events
                                 Commands({"operating_state", "error", "warning", "status"}));
-
-    // non CRTK commands
-    AddPublisherFromCommandVoid(interface_provided,
-                                "Freeze",
-                                ros_namespace + "/freeze");
 }
 
 // Configure is a virtual method, we can redefine it and have our own
