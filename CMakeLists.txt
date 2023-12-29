@@ -10,7 +10,7 @@
 # --- end cisst license ---
 
 cmake_minimum_required (VERSION 3.10)
-project (dvrk_arm_from_ros VERSION 2.2.0)
+project (dvrk_arm_from_ros VERSION 2.2.1)
 
 find_package (ament_cmake REQUIRED)
 find_package (rclcpp REQUIRED)
@@ -40,7 +40,7 @@ set (REQUIRED_CISST_LIBRARIES
      cisstParameterTypesQt
      )
 
-find_package (cisst 1.2.0 REQUIRED ${REQUIRED_CISST_LIBRARIES})
+find_package (cisst 1.2.1 REQUIRED ${REQUIRED_CISST_LIBRARIES})
 
 if (cisst_FOUND_AS_REQUIRED)
 
